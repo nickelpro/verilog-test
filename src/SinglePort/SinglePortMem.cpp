@@ -44,4 +44,6 @@ int main(void) {
   model.eval();
 
   assert(model.data == 0xCAFEBABE);
+
+  Verilated::threadContextp()->coveragep()->write();
 }

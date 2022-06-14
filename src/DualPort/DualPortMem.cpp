@@ -36,4 +36,6 @@ int main(void) {
   step(model);
 
   assert(model.r_data == 0x40404040);
+
+  Verilated::threadContextp()->coveragep()->write();
 }
