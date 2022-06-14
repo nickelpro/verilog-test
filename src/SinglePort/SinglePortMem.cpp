@@ -45,5 +45,18 @@ int main(void) {
 
   assert(model.data == 0xCAFEBABE);
 
+  model.select = 0;
+  model.o_enable = 0;
+  model.w_enable = 1;
+  model.data = 0x80808080;
+  step(model);
+
+  model.select = 1;
+  model.w_enable = 0;
+  model.o_enable = 1;
+  step(model);
+
+  assert(model.data == 0xCAFEBABE);
+
   Verilated::threadContextp()->coveragep()->write();
 }
