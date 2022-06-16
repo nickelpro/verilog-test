@@ -24,7 +24,7 @@ jobs:
       - name: Test & Generate Coverage
         run: |
           ctest -C Release --output-on-failure
-          verilator_coverage -write-info coverage.txt src/**/coverage.dat
+          verilator_coverage -write-info coverage.txt src/**/*.dat
 
       - name: Upload Coverage
         uses: codecov/codecov-action@v2

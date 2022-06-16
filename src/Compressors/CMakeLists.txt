@@ -1,0 +1,5 @@
+setup_test(Comp22 Comp22.sv Comp22.cpp)
+setup_test(Comp32 Comp32.sv Comp32.cpp)
+setup_test(Comp42 Comp42.sv Comp42.cpp)
+setup_test(Comp53 Comp53.sv Comp53.cpp)
+setup_test(Comp73 Comp73.sv Comp73.cpp)
